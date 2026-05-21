@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** developing
-**Last updated:** 2026-05-21
-**Sources:** [linac-small-field-dosimetry-process-tree], [trs-483], [tg-155]
+**Last updated:** 2026-05-22
+**Sources:** [linac-small-field-dosimetry-process-tree], [trs-483], [tg-155], [small-field-output-factor-tps-entry]
 
 ## Summary
 
@@ -27,6 +27,7 @@ Small-field commissioning on a conventional linear accelerator (Varian, Elekta, 
 - **FFF-specific requirements:** Higher dose rates require dedicated dose-rate dependence testing; higher ion recombination in chambers must be corrected. [linac-small-field-dosimetry-process-tree]
 - **Multi-detector verification:** ≥ 2 independent detector types required for all methods; comparison validates the output factor and correction factor application. [linac-small-field-dosimetry-process-tree]
 - **Clinical sub-5 mm caveat:** Fields below 0.5 cm represent "research rather than clinical dosimetry" per TRS-483; measurement uncertainty of ±5–7% (k=1) is typical. [linac-small-field-dosimetry-process-tree]
+- **Phase 8 — TPS output factor entry:** TPS beam models index output factor tables by nominal jaw setting, not by FWHM. The value entered for a given jaw size (e.g., 1×1 cm²) is the corrected Ω = (M_f_clin / M_f_msr) × k, where k is looked up at the actual physical S_clin (FWHM-derived). Extrapolating to a field with FWHM matching the nominal jaw size introduces systematic TPS beam-model error. [small-field-output-factor-tps-entry]
 
 ## Uncertainty Budget
 
@@ -49,6 +50,7 @@ Small-field commissioning on a conventional linear accelerator (Varian, Elekta, 
 - [[reference-dosimetry-kq]] — Phase 2 reference dosimetry uses TRS-398/TRS-483 k_Q formalism
 - [[machine-specific-reference-field]] — Not applicable to conventional linacs (which can realize 10 × 10 cm), but the msr formalism is relevant if the linac is used in SRS mode with a non-standard reference field
 - [[small-field-definition]] — Phase 4 geometric characterization applies the FWHM-based field size definition; understanding when a field is small determines which method applies
+- [[tps-beam-configuration]] — Phase 8 detail: the specific workflow for translating corrected output factor measurements into TPS beam model entries
 
 ## Open Questions
 

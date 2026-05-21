@@ -61,6 +61,24 @@ Append-only chronological record of all wiki operations.
 
 ---
 
+## 2026-05-22 — Ingest: TPS output factor entry (Gemini Q&A)
+
+**Operation:** Ingest
+**Sources processed:**
+- `small-field-output-factor-tps-entry` — Gemini Deep Research Q&A (2026-04-15): clarification of which output factor value to enter into TPS beam configuration per IAEA TRS-483; nominal jaw vs. FWHM-based field size distinction; four-step workflow; extrapolation criteria.
+
+**Pages created:**
+- `tps-beam-configuration` (Topic — developing)
+
+**Pages updated:**
+- `small-field-output-correction-factors` — Added: TPS nominal-jaw indexing fact and note on extrapolation risk; new connection to [[tps-beam-configuration]]; sources and last-updated date bumped.
+- `small-field-commissioning` — Added: Phase 8 TPS entry detail (nominal jaw indexing, Ω entry procedure); new connection to [[tps-beam-configuration]]; sources and last-updated date bumped.
+- `index.md` — Added 1 new row; total pages 13 → 14; last-updated date bumped.
+
+**Notes:** Source is a Gemini-generated Q&A referencing TRS-483. The key insight — that TPS models index by nominal jaw setting and therefore the corrected Ω should be entered at the nominal jaw label rather than at an extrapolated FWHM-matching value — fills a practical clinical gap not explicitly stated in prior ingested sources.
+
+---
+
 ## 2026-05-21 — Ingest: Nahum cavity theory
 
 **Operation:** Ingest

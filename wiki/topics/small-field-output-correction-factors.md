@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** developing
-**Last updated:** 2026-05-21
-**Sources:** [trs-483], [tg-155], [nahum-cavity-theory-2009], [linac-small-field-dosimetry-process-tree]
+**Last updated:** 2026-05-22
+**Sources:** [trs-483], [tg-155], [nahum-cavity-theory-2009], [linac-small-field-dosimetry-process-tree], [small-field-output-factor-tps-entry]
 
 ## Summary
 
@@ -29,6 +29,7 @@ The small-field output correction factor k_{Q_clin,Q_msr}^{f_clin,f_msr} (also w
 - **Detectors to avoid in very small fields:** Large-volume ionization chambers (Farmer type), shielded diodes (tungsten filter introduces extra scatter and directional dependence), PinPoint chambers (oriented perpendicular). [tg-155]
 - **Uncertainty budget:** k factor can be provided by MC with overall uncertainty <0.7% (1 SD) for the largest contributing terms; total field output factor uncertainty is ~0.75–1% (1 SD) for careful measurements in a homogeneous water medium. [tg-155]
 - **Source slug for field size:** Field size parameter S_clin = √(FWHM_x × FWHM_y); k is determined experimentally as a function of S_clin, the depth of measurement, and detector type. [tg-155]
+- **TPS entry uses nominal jaw as index:** When applying the corrected Ω to a TPS beam model, the table is indexed by the nominal jaw setting (e.g., "1×1 cm²"), not by the FWHM-based S_clin. The k factor is looked up at the actual measured S_clin (which may be 1–3 mm larger than the jaw setting), but the resulting Ω is stored under the nominal jaw label. Extrapolating Ω to match an exact FWHM introduces systematic TPS error. [small-field-output-factor-tps-entry]
 
 ## Connections
 
@@ -41,6 +42,7 @@ The small-field output correction factor k_{Q_clin,Q_msr}^{f_clin,f_msr} (also w
 - [[cavity-theory]] — Spencer–Attix stopping-power ratios and perturbation factors (P_fl, P_gr, P_wall, etc.) from cavity theory are the theoretical components of k_{Q_clin,Q_msr}
 - [[intermediate-field-method]] — The daisy-chain method reduces the size of correction required at each step by cross-calibrating detectors at an intermediate field; k factors are still needed for the small-field segment
 - [[small-field-commissioning]] — Phases 5–6 of the commissioning workflow apply the k factors from Tables 24/27 to measured output readings
+- [[tps-beam-configuration]] — The corrected Ω from this page is entered into TPS indexed by nominal jaw setting; the nominal/physical distinction is critical for correct TPS commissioning
 
 ## Open Questions
 

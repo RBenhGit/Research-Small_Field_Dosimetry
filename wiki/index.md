@@ -17,8 +17,9 @@ Master catalog of all pages. Updated automatically on every ingest.
 | [stopping-power-ratios](topics/stopping-power-ratios.md) | Topic | stub | Spencer–Attix water-to-air stopping-power ratio s_w,air; stability across small field sizes (<0.5% change); energy dependence |
 | [intermediate-field-method](topics/intermediate-field-method.md) | Topic | developing | Daisy-chain calibration bridging 10×10 cm reference to sub-cm fields via a 3–4 cm intermediate step; TRS-483 Method B |
 | [small-field-commissioning](topics/small-field-commissioning.md) | Topic | developing | Nine-phase workflow for conventional linac small-field output factor commissioning per TRS-483; detector selection, 3 measurement methods, uncertainty budget |
+| [tps-beam-configuration](topics/tps-beam-configuration.md) | Topic | developing | TPS output factor entry workflow: TPS indexes by nominal jaw setting; k is looked up at physical S_clin; extrapolating to FWHM-exact field introduces systematic error |
 
 ---
 
-*Last updated: 2026-05-21*
-*Total pages: 13*
+*Last updated: 2026-05-22*
+*Total pages: 14*
